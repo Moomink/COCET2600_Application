@@ -17,13 +17,14 @@ import 'main.dart';
 
 Widget wordInfo(int start) {
   Map<String, dynamic> data = COCET.data;
-  int i;
+  int counter = 0;
 
 //  debugPrint("${data["1"]}");
   // ignore: missing_return
   return ListView.builder(itemBuilder: (context, index) {
-    if(index+1 < 50){
-      return _buildList(index, data[i.toString()]);
+    if(index < 50 && counter < 50){
+      counter++;
+      return _buildList(index+1, data[(index+1).toString()]);
     }
   });
 }

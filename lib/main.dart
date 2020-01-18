@@ -7,7 +7,7 @@ void main() => runApp(COCET());
 class COCET extends StatefulWidget {
   static int start = 1;
   static int end = 500;
-  static int words_start = 0;
+  static int wordsStart = 0;
   static String status = "main";
   static Map data;
 
@@ -141,7 +141,7 @@ class AppState extends State<COCET> {
         break;
 
       case "words":
-        return wordInfo(COCET.words_start);
+        return wordInfo(COCET.wordsStart);
         break;
 
       default:
