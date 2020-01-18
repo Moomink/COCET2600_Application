@@ -1,11 +1,15 @@
 import 'package:cocet_2600/show_words.dart';
 import 'package:flutter/material.dart';
+import 'package:cocet_2600/wordInfo.dart';
 
 void main() => runApp(COCET());
 
 class COCET extends StatefulWidget {
   static int start = 1;
   static int end = 500;
+  static int words_start = 0;
+  static String status = "main";
+  static Map data;
 
   @override
   AppState createState() => AppState();
@@ -22,7 +26,7 @@ class AppState extends State<COCET> {
             title: Text('COCET 2600'),
           ),
           drawer: Drawer(child: sideBar()),
-          body: wordList(COCET.start, COCET.end),
+          body: phase(),
         ));
   }
 
@@ -53,7 +57,11 @@ class AppState extends State<COCET> {
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.black, fontSize: 24)),
               onTap: () {
-                showList(1, 500);
+                setState(() {
+                  COCET.start = 1;
+                  COCET.end = 500;
+                  COCET.status = "wordList";
+                });
               }),
         ),
         Card(
@@ -63,7 +71,11 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              showList(501, 1000);
+              setState(() {
+                COCET.start = 501;
+                COCET.end = 1000;
+                COCET.status = "wordList";
+              });
             },
           ),
         ),
@@ -74,7 +86,11 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              showList(1001, 1500);
+              setState(() {
+                COCET.start = 1001;
+                COCET.end = 1500;
+                COCET.status = "wordList";
+              });
             },
           ),
         ),
@@ -85,7 +101,11 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              showList(1501, 2000);
+              setState(() {
+                COCET.start = 1501;
+                COCET.end = 2000;
+                COCET.status = "wordList";
+              });
             },
           ),
         ),
@@ -96,7 +116,11 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              showList(2001, 2600);
+              setState(() {
+                COCET.start = 2001;
+                COCET.end = 2600;
+                COCET.status = "wordList";
+              });
             },
           ),
         ),
@@ -108,5 +132,21 @@ class AppState extends State<COCET> {
     COCET.start = start;
     COCET.end = end;
     setState(() {});
+  }
+
+  Widget phase() {
+    switch (COCET.status) {
+      case "wordList":
+        return wordList(COCET.start, COCET.end, this);
+        break;
+
+      case "words":
+        return wordInfo(COCET.words_start);
+        break;
+
+      default:
+        return null;
+        break;
+    }
   }
 }
