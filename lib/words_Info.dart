@@ -1,39 +1,23 @@
-import 'package:flutter/material.dart'
-    show
-        BorderRadius,
-        BoxDecoration,
-        Colors,
-        Column,
-        Container,
-        Divider,
-        Expanded,
-        ListView,
-        Row,
-        Text,
-        TextAlign,
-        TextStyle,
-        Widget;
-import 'main.dart';
+import 'package:flutter/material.dart';
 
-Widget wordInfo(int start) {
-  Map<String, dynamic> data = COCET.data;
-  int counter = 0;
+var counter = 0;
 
-//  debugPrint("${data["1"]}");
-  // ignore: missing_return
-  return ListView.builder(itemBuilder: (context, index) {
-    if(index < 50 && counter < 50){
-      counter++;
-      return _buildList(index+1, data[(index+1).toString()]);
-    }
-  });
+Widget words_Info(var _data) {
+  ListView.builder(
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        if (index < 50 && counter < 50) {
+          debugPrint(_data[(index + 1).toString()]);
+          counter++;
+          return _words_Info(index + 1, _data[(index + 1).toString()]);
+        }
+      });
 }
 
-Widget _buildList(int number, Map<String, dynamic> data) {
+Widget _words_Info(int number, Map<String, dynamic> data) {
   return Container(
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(10),color: Colors.blueAccent
-    ),
+        borderRadius: BorderRadius.circular(10), color: Colors.blueAccent),
     child: Column(
       children: <Widget>[
         Row(
@@ -52,9 +36,10 @@ Widget _buildList(int number, Map<String, dynamic> data) {
                   '${data["Word"]}:${data["Meaning"]}',
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 20, color: Colors.black38),
-                ))
+                )),
           ],
         ),
+        Divider(),
         Text(
           "${data["Example"]}",
           textAlign: TextAlign.left,

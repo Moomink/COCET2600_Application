@@ -1,38 +1,34 @@
-import 'package:cocet_2600/show_words.dart';
+import 'package:cocet_2600/words_List.dart';
 import 'package:flutter/material.dart';
-import 'package:cocet_2600/wordInfo.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-void main() => runApp(COCET());
+void main() => runApp(MaterialApp(title: 'Home', home: Home(BodyModel())));
 
-class COCET extends StatefulWidget {
-  static int start = 1;
-  static int end = 500;
-  static int wordsStart = 0;
-  static String status = "main";
-  static Map data;
+class Home extends StatelessWidget {
+  final BodyModel bodymodel;
 
-  @override
-  AppState createState() => AppState();
+  Home(this.bodymodel);
+
+  Widget build(BuildContext build) {
+    debugPrint("Main");
+    return ScopedModel<BodyModel>(model: bodymodel, child: AppHome());
+  }
 }
 
-class AppState extends State<COCET> {
+class AppHome extends StatelessWidget {
   Widget build(BuildContext context) {
-    debugPrint("Main");
-    return MaterialApp(
-        title: 'COCET 2600',
-        home: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            title: Text('COCET 2600'),
-          ),
-          drawer: Drawer(child: sideBar()),
-          body: phase(),
-        ));
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Home'),
+        ),
+        drawer: sideBar(context),
+        body: ScopedModel.of<BodyModel>(context, rebuildOnChange: true).widget);
   }
 
-  Widget sideBar() {
+  Widget sideBar(BuildContext context) {
     debugPrint("SideBar");
-    return Container(
+    return Drawer(
         child: Column(children: <Widget>[
       Row(children: <Widget>[
         Expanded(
@@ -57,11 +53,8 @@ class AppState extends State<COCET> {
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.black, fontSize: 24)),
               onTap: () {
-                setState(() {
-                  COCET.start = 1;
-                  COCET.end = 500;
-                  COCET.status = "wordList";
-                });
+                ScopedModel.of<BodyModel>(context, rebuildOnChange: true)
+                    .setBody(words_List(1, 500));
               }),
         ),
         Card(
@@ -71,11 +64,7 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              setState(() {
-                COCET.start = 501;
-                COCET.end = 1000;
-                COCET.status = "wordList";
-              });
+              ScopedModel.of<BodyModel>(context).setBody(words_List(501, 1000));
             },
           ),
         ),
@@ -86,11 +75,7 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              setState(() {
-                COCET.start = 1001;
-                COCET.end = 1500;
-                COCET.status = "wordList";
-              });
+              ScopedModel.of<BodyModel>(context).setBody(words_List(1001, 1500));
             },
           ),
         ),
@@ -101,11 +86,7 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              setState(() {
-                COCET.start = 1501;
-                COCET.end = 2000;
-                COCET.status = "wordList";
-              });
+              ScopedModel.of<BodyModel>(context).setBody(words_List(1501, 2000));
             },
           ),
         ),
@@ -116,37 +97,30 @@ class AppState extends State<COCET> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              setState(() {
-                COCET.start = 2001;
-                COCET.end = 2600;
-                COCET.status = "wordList";
-              });
+              ScopedModel.of<BodyModel>(context).setBody(words_List(2001, 2600));
             },
           ),
         ),
       ]))
     ]));
   }
+}
 
-  void showList(int start, int end) {
-    COCET.start = start;
-    COCET.end = end;
-    setState(() {});
+class BodyModel extends Model {
+  Widget _widget = Center(
+    child: Text('This is testing'),
+  );
+
+  Widget get widget => _widget;
+
+//  set widget(Widget body){
+//    _widget = body;
+//  }
+
+  void setBody(Widget body) {
+    _widget = body;
+    notifyListeners();
   }
 
-  Widget phase() {
-    switch (COCET.status) {
-      case "wordList":
-        return wordList(COCET.start, COCET.end, this);
-        break;
-
-      case "words":
-        return wordInfo(COCET.wordsStart);
-        break;
-
-      default:
-        return null;
-        break;
-    }
-  }
+//  static BodyModel of(BuildContext context) => ScopedModel.of<BodyModel>(context);
 }
