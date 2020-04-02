@@ -54,7 +54,8 @@ class AppHome extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 24)),
               onTap: () {
                 ScopedModel.of<BodyModel>(context, rebuildOnChange: true)
-                    .setBody(words_List(1, 500));
+                    .setBody(Words_List(1, 500));
+                Navigator.pop(context, true);
               }),
         ),
         Card(
@@ -64,7 +65,8 @@ class AppHome extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              ScopedModel.of<BodyModel>(context).setBody(words_List(501, 1000));
+              ScopedModel.of<BodyModel>(context).setBody(Words_List(501, 1000));
+              Navigator.pop(context, true);
             },
           ),
         ),
@@ -75,7 +77,9 @@ class AppHome extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              ScopedModel.of<BodyModel>(context).setBody(words_List(1001, 1500));
+              ScopedModel.of<BodyModel>(context)
+                  .setBody(Words_List(1001, 1500));
+              Navigator.pop(context, true);
             },
           ),
         ),
@@ -86,7 +90,9 @@ class AppHome extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              ScopedModel.of<BodyModel>(context).setBody(words_List(1501, 2000));
+              ScopedModel.of<BodyModel>(context)
+                  .setBody(Words_List(1501, 2000));
+              Navigator.pop(context, true);
             },
           ),
         ),
@@ -97,7 +103,8 @@ class AppHome extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.black, fontSize: 24)),
             onTap: () {
-              ScopedModel.of<BodyModel>(context).setBody(words_List(2001, 2600));
+              ScopedModel.of<BodyModel>(context).setBody(Words_List(2001, 2600));
+              Navigator.pop(context, true);
             },
           ),
         ),
@@ -112,10 +119,6 @@ class BodyModel extends Model {
   );
 
   Widget get widget => _widget;
-
-//  set widget(Widget body){
-//    _widget = body;
-//  }
 
   void setBody(Widget body) {
     _widget = body;

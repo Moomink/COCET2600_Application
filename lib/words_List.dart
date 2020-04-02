@@ -7,42 +7,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:scoped_model/scoped_model.dart';
 
+class Words_List extends StatelessWidget {
+  int rangeStart = 0;
+  int rangeEnd = 0;
 
-  void loadJson() async {
+  Future<Map<String, dynamic>> loadJson() async {
     String fileData = await rootBundle.loadString('assets/data/word_1-50.json');
-    data = json.decode(fileData);
+    return json.decode(fileData);
   }
-  var data;
-/*  Widget build(BuildContext build) => MaterialApp(
-   home: Scaffold(
-     appBar: AppBar(
-       title:Text('ShowWords'),
-       centerTitle: true,
-     ),
-     drawer: sideBar(build),
-     body: list(),
-   ),
-  );*/
 
-  Widget words_List(var rangeStart,var rangeEnd){
+  Words_List(this.rangeStart, this.rangeEnd);
+
+  Widget build(BuildContext build) {
     int list = (rangeEnd - rangeStart + 1) ~/ 50;
     int i = -1;
     // ignore: missing_return
     return ListView.builder(itemBuilder: (context, index) {
       if (index < list) {
         i++;
-        return _words_List(rangeStart + i * 50, rangeStart + i * 50 + 50 - 1,context);
+        return _words_List(
+            rangeStart + i * 50, rangeStart + i * 50 + 50 - 1, context);
       }
     });
   }
 
-  Widget _words_List(int start, int end,BuildContext context) {
+  Widget _words_List(int start, int end, BuildContext context) {
     return Card(
         color: Colors.cyanAccent,
         child: ListTile(
             onTap: () async {
-              await loadJson();
-              ScopedModel.of<BodyModel>(context).setBody(words_Info(data));
+              Map data = await loadJson();
+              ScopedModel.of<BodyModel>(context).setBody(Words_Info(data));
             },
             title: Text(
               'No.$start ～ No.$end',
@@ -50,3 +45,4 @@ import 'package:scoped_model/scoped_model.dart';
               textAlign: TextAlign.center,
             )));
   }
+}
