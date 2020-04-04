@@ -51,7 +51,7 @@ class Words_Info extends StatelessWidget {
           Divider(),
           Text(
             "${data["Example"]}",
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 15,
               color: Colors.black54,

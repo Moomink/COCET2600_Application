@@ -11,8 +11,8 @@ class Words_List extends StatelessWidget {
   int rangeStart = 0;
   int rangeEnd = 0;
 
-  Future<Map<String, dynamic>> loadJson() async {
-    String fileData = await rootBundle.loadString('assets/data/word_1-50.json');
+  Future<Map<String, dynamic>> loadJson(int start,int end) async {
+    String fileData = await rootBundle.loadString('assets/data/word_${start}-${end}.json');
     return json.decode(fileData);
   }
 
@@ -36,7 +36,7 @@ class Words_List extends StatelessWidget {
         color: Colors.cyanAccent,
         child: ListTile(
             onTap: () async {
-              Map data = await loadJson();
+              Map data = await loadJson(start,end);
               ScopedModel.of<BodyModel>(context).setBody(Words_Info(data));
             },
             title: Text(
