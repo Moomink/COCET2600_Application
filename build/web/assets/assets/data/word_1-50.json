@@ -1,0 +1,252 @@
+{
+  "1": {
+    "Word": "system",
+    "Meaning": "名:システム,体系",
+    "Example": "Our school has the newest computer system."
+  },
+  "2": {
+    "Word": "science",
+    "Meaning": "名:科学",
+    "Example": "The study of science is very important for all of us."
+  },
+  "3": {
+    "Word": "technology",
+    "Meaning": "名:科学技術(テクノロジー)",
+    "Example": "Technology does not always make our life easier."
+  },
+  "4": {
+    "Word": "information",
+    "Meaning": "名:情報",
+    "Example": "We need more information about the new technology."
+  },
+  "5": {
+    "Word": "energy",
+    "Meaning": "名:エネルギー",
+    "Example": "Food is changed into energy in our bodies."
+  },
+  "6": {
+    "Word": "project",
+    "Meaning": "名:計画(プロジェクト)   他:投影する",
+    "Example": "They started a project to build the fastest super computer in the world."
+  },
+  "7": {
+    "Word": "design",
+    "Meaning": "名:設計(デザイン),図案   他:デザイン(設計)する",
+    "Example": "The design of the new building is beautiful."
+  },
+  "8": {
+    "Word": "engineer",
+    "Meaning": "名:技術者",
+    "Example": "I think you will be good engineers."
+  },
+  "9": {
+    "Word": "base",
+    "Meaning": "名:基礎,塩基,底辺",
+    "Example": "The base of all technologies is science."
+  },
+  "10": {
+    "Word": "network",
+    "Meaning": "名:ネットワーク",
+    "Example": "The computer network is an information technology system."
+  },
+  "11": {
+    "Word": "battery",
+    "Meaning": "名:電池(バッテリー)",
+    "Example": "When the battery died, the toy car stopped."
+  },
+  "12": {
+    "Word": "message",
+    "Meaning": "名:メッセージ",
+    "Example": "Sending a massage on the network is very easy."
+  },
+  "13": {
+    "Word": "stage",
+    "Meaning": "名:段階,舞台",
+    "Example": "The design of the system is still at the first stage."
+  },
+  "14": {
+    "Word": "screen",
+    "Meaning": "名:スクリーン(画面),網",
+    "Example": "The screen is too small to show all the information."
+  },
+  "15": {
+    "Word": "copy",
+    "Meaning": "名:写し(コピー)   他:写す",
+    "Example": "A hundred thousand copies of the book sold in a month."
+  },
+  "16": {
+    "Word": "chain",
+    "Meaning": "名:鎖(チェーン)",
+    "Example": "This chain is very light because it is plastic."
+  },
+  "17": {
+    "Word": "tube",
+    "Meaning": "名:管(チューブ)",
+    "Example": "This tube is soft and easy to cut."
+  },
+  "18": {
+    "Word": "pair",
+    "Meaning": "名:2つ(ペア),",
+    "Example": "The system works by the power of batteries."
+  },
+  "19": {
+    "Word": "power",
+    "Meaning": "名:電力,動力",
+    "Example": "The robot works by the power of batteries."
+  },
+  "20": {
+    "Word": "engine",
+    "Meaning": "名:エンジン",
+    "Example": "The airplane has a pair of jet engines."
+  },
+  "21": {
+    "Word": "panel",
+    "Meaning": "名:パネル",
+    "Example": "The screen ojn the stage is made up of 1 LED panels."
+  },
+  "22": {
+    "Word": "error",
+    "Meaning": "名:誤り(エラー)",
+    "Example": "The program stopped because of an error."
+  },
+  "23": {
+    "Word": "wave",
+    "Meaning": "名:波   自:揺れる   他:振る",
+    "Example": "Sound waves travel through water faster than through air."
+  },
+  "24": {
+    "Word": "ocean",
+    "Meaning": "名:海洋",
+    "Example": "She became famous for her study of the ocean animal."
+  },
+  "25": {
+    "Word": "error",
+    "Meaning": "名:誤り(エラー)",
+    "Example": "The program stopped because of an error."
+  },
+  "26": {
+    "Word": "pump",
+    "Meaning": "名:ポンプ   自,他:ポンプで送る",
+    "Example": "The pump is driven by the motor."
+  },
+  "27": {
+    "Word": "goal",
+    "Meaning": "名:目標(ゴール)",
+    "Example": "When you start a project, you should make its goal clear."
+  },
+  "28": {
+    "Word": "crystal",
+    "Meaning": "名:結晶,水晶",
+    "Example": "How can I see ice crystals?"
+  },
+  "29": {
+    "Word": "wire",
+    "Meaning": "名:針金,電線   他:配線する",
+    "Example": "Put the wire through the tube."
+  },
+  "30": {
+    "Word": "style",
+    "Meaning": "名:様式(スタイル)",
+    "Example": "I like the Japanese style of building."
+  },
+  "31": {
+    "Word": "sheet",
+    "Meaning": "名:用紙,薄板",
+    "Example": "Give me two more answer sheets."
+  },
+  "32": {
+    "Word": "film",
+    "Meaning": "名:膜,フィルム",
+    "Example": "There is a film of oil on the water."
+  },
+  "33": {
+    "Word": "label",
+    "Meaning": "名:ラベル,標識",
+    "Example": "There was no label on the bottle."
+  },
+  "34": {
+    "Word": "pipe",
+    "Meaning": "名:管(パイプ)",
+    "Example": "This pipe is not for water but for oil."
+  },
+  "35": {
+    "Word": "route",
+    "Meaning": "名:道筋(ルート)",
+    "Example": "The shortest route is not always the easiest."
+  },
+  "36": {
+    "Word": "steel",
+    "Meaning": "名:鋼鉄,鋼",
+    "Example": "The cover of the motor is made out of a steel sheet."
+  },
+  "37": {
+    "Word": "center",
+    "Meaning": "名:中心,中央   他:集中させる",
+    "Example": "The goal of the race is in the center of the city."
+  },
+  "38": {
+    "Word": "dial",
+    "Meaning": "名:ダイヤル   他:ダイヤルを回す",
+    "Example": "Set the dial to the center."
+  },
+  "39": {
+    "Word": "filter",
+    "Meaning": "名:フィルター   他:濾過する",
+    "Example": "A filter is set in the pump to clean up the water."
+  },
+  "40": {
+    "Word": "condition",
+    "Meaning": "名:条件,状態",
+    "Example": "This tree can grow under bad conditions."
+  },
+  "41": {
+    "Word": "brush",
+    "Meaning": "名:ブラシ,刷毛,筆   他:ブラシをかける",
+    "Example": "Clean the air filter with a brush."
+  },
+  "42": {
+    "Word": "less",
+    "Meaning": "形:より少ない(小さい)   副:より少なく",
+    "Example": "This washing machine uses less water than other models."
+  },
+  "43": {
+    "Word": "minus",
+    "Meaning": "形:負(マイナス)の   名:マイナス(記号)",
+    "Example": "Minus one is one less than zero."
+  },
+  "44": {
+    "Word": "equal",
+    "Meaning": "形:等しい   他:～に等しい",
+    "Example": "Those two numbers are equal to each other."
+  },
+  "45": {
+    "Word": "normal",
+    "Meaning": "形:普通の,正常な",
+    "Example": "Such big waves cannot be seen under normal conditions."
+  },
+  "46": {
+    "Word": "single",
+    "Meaning": "形:1つの",
+    "Example": "He did not say a single word."
+  },
+  "47": {
+    "Word": "double",
+    "Meaning": "形:倍の   他:倍にする",
+    "Example": "The machine is playing back the video at double speed."
+  },
+  "48": {
+    "Word": "professional",
+    "Meaning": "形:プロの",
+    "Example": "No professional singers can take part in this contest."
+  },
+  "49": {
+    "Word": "total",
+    "Meaning": "形:全体の,合計の   名:全体,合計",
+    "Example": "What was the total number of engineers who took part in the project."
+  },
+  "50": {
+    "Word": "simple",
+    "Meaning": "形:簡単な,単純な",
+    "Example": "Do you have a book written in simple English?"
+  }
+}
